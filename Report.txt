@@ -1,0 +1,31 @@
+#######################################################################
+#######################################################################
+This project checks whether bloom filters can be used in indexing operations during spidering. I have added a brief description of some of the functions used in my last commit. The remaining have been covered as comments in the code.
+For queries and suggestion: agrawal.shubham1729@gmail.com
+Subject: Github: Web crawler
+
+#######################################################################
+#######################################################################
+
+
+//I have got a function getlinks() defined at the top.
+So what does it do?
+	the argument passed is the url of a website. We would like to fetch all the links being mentioned on that page.
+	
+//Next I have got addindex functioned defined
+	it takes the listname, keyword and a url as arguments. Listname is essentially is the record of keyword and corresponding url's in which they occur.
+	This function checks if the keyword is present in the list, if so append the url. Else, append keyword plus the url associated with.
+	
+//union
+	returns the union of two lists passed as arguments
+	
+//crawl
+	this is one of the important function. It checks if a particular page has been crawled or not. If crawled, we will not crawl again, else will and add it to the crawled list.
+	
+//Now we work on making a web index.
+This will store what words that appearing on the web page against each web page.
+"For later": We see that same keyword is being added multiple times in the list. Use a hash function to reduce it. 
+
+//get_page(url)
+this function is used to read the contents of the desired web page. returns the contents of the web page minus the html crap.
+
